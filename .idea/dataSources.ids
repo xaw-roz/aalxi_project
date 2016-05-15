@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - grails_project@localhost" uuid="f9234c7c-f6b2-47e8-bf62-1c8cb42943c8">
+    <database-info product="MySQL" version="5.6.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="grails_project"/>
+      <table id="2" parent="1" name="student"/>
+      <table id="3" parent="1" name="subject"/>
+      <table id="4" parent="1" name="teacher"/>
+      <table id="5" parent="1" name="teacher_subject"/>
+      <column id="6" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="7" parent="2" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="8" parent="2" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="9" parent="2" name="percentage">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="10" parent="2" name="phone_number">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="11" parent="2" name="roll">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="12" parent="2" name="section">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="13" parent="2" name="subject_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="14" parent="2" name="FK_cxettjcr61ndthht4rpmu2vi8">
+        <columns>subject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="15" parent="2" name="UK_hhk2bgdrn1ysgik5jfkw8ohnx">
+        <columns>roll</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="16" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="17" parent="2" name="UK_hhk2bgdrn1ysgik5jfkw8ohnx">
+        <columns>roll</columns>
+        <underlying-index>UK_hhk2bgdrn1ysgik5jfkw8ohnx</underlying-index>
+      </key>
+      <foreign-key id="18" parent="2" name="FK_cxettjcr61ndthht4rpmu2vi8">
+        <columns>subject_id</columns>
+        <ref-key>~.subject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="19" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="20" parent="3" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="21" parent="3" name="credit_hours">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="22" parent="3" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="23" parent="3" name="sid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="24" parent="3" name="teacher_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="25" parent="3" name="UK_di7oi24do5d9w7phfhitr6itr">
+        <columns>sid</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="26" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="27" parent="3" name="UK_di7oi24do5d9w7phfhitr6itr">
+        <columns>sid</columns>
+        <underlying-index>UK_di7oi24do5d9w7phfhitr6itr</underlying-index>
+      </key>
+      <column id="28" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="29" parent="4" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="30" parent="4" name="location">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="31" parent="4" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="32" parent="4" name="phone_number">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="33" parent="4" name="salary">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="34" parent="4" name="shift">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="35" parent="4" name="subavailable">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="36" parent="4" name="subjects_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <key id="37" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="38" parent="5" name="teacher_subjects_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="39" parent="5" name="subject_id">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="40" parent="5" name="FK_5lh8a6qxlitio1j5aqkch2886">
+        <columns>teacher_subjects_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="41" parent="5" name="FK_d1qy803u201wtl4ox2cm33mi1">
+        <columns>subject_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <foreign-key id="42" parent="5" name="FK_5lh8a6qxlitio1j5aqkch2886">
+        <columns>teacher_subjects_id</columns>
+        <ref-key>~.teacher.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="43" parent="5" name="FK_d1qy803u201wtl4ox2cm33mi1">
+        <columns>subject_id</columns>
+        <ref-key>~.subject.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>
